@@ -217,3 +217,15 @@ if(!function_exists('setHeaderIcon')){
         return $icon;
     }
 }
+
+if(!function_exists('splitTextByParagraphTag')){
+    function splitTextByParagraphTag($text){
+        $paragraphs = preg_split( '|(?<=</p>)\s+(?=<p)|', $text, -1, PREG_SPLIT_DELIM_CAPTURE);
+       // dump($paragraphs);
+        $arr_paragraph = array();
+        foreach( $paragraphs as $item){
+            array_push($arr_paragraph , strip_tags($item) );
+        }
+        return $arr_paragraph;
+    }
+}

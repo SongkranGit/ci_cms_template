@@ -8,11 +8,14 @@ class Aboutus extends Frontend_Controller
     function __construct()
     {
         parent::__construct();
+        $this->load->model('Page_model');
     }
 
 
     function index(){
-        return $this->load->view('frontend/about_us');
+        $data['page'] = $this->Page_model->getByPageName('about_us');
+        $data['settings'] = $this->app_data['settings'] ;
+        return $this->load->view('frontend/about_us' , $data);
     }
 
 }

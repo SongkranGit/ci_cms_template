@@ -146,5 +146,5 @@ define('ADMIN_CONTACT' , 'admin/Contact');
 define('PATH_UPLOADS' , realpath(APPPATH . '../uploads/' ));
 define('IMAGE_GALLERY_WIDTH' , 1280);
 define('IMAGE_GALLERY_HEIGHT' , 720);
-define('IMAGE_SLIDE_SHOW_WIDTH' , 1903);
-define('IMAGE_SLIDE_SHOW_HEIGHT' , 686);
+define('IMAGE_SLIDE_SHOW_WIDTH' , 1920);
+define('IMAGE_SLIDE_SHOW_HEIGHT' , 620);

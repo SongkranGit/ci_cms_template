@@ -9,7 +9,7 @@
 class MY_Controller extends CI_Controller
 {
 
-    public $data = array();
+    protected $app_data = array();
 
     function __construct()
     {

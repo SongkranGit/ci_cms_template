@@ -13,7 +13,8 @@ class Contactus extends Frontend_Controller
 
     function index()
     {
-        return $this->load->view('frontend/contact_us');
+        $data['settings'] = $this->app_data['settings'];
+        return $this->load->view('frontend/contact_us' , $data );
     }
 
     function create()

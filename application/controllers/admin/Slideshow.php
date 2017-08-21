@@ -162,7 +162,7 @@ class Slideshow extends Admin_Controller
     {
         $this->load->library("SimpleImage");
         $img = new SimpleImage();
-        $img->load($arr_data_uploaded["full_path"])->best_fit(1916, 670)->save($arr_data_uploaded["full_path"]);
+        $img->load($arr_data_uploaded["full_path"])->best_fit(IMAGE_SLIDE_SHOW_WIDTH, IMAGE_SLIDE_SHOW_HEIGHT)->save($arr_data_uploaded["full_path"]);
     }
 
 

@@ -11,22 +11,31 @@ class Frontend_Controller extends MY_Controller
 
     protected $main_layout;
 
+    protected $settings;
+
     function __construct()
     {
         parent::__construct();
 
-        $this->load->model("Page_model");
+        $this->load->model("Setting_model");
 
         $this->setConfig();
 
         $this->setDefaultLanguage();
 
+        $this->loadSettings();
+
+    }
+
+
+    private function loadSettings(){
+        $this->app_data['settings'] = $this->Setting_model->getSettings();
     }
 
 
     private function setConfig()
     {
-        $this->data['site_name'] = config_item("site_name");
+        $this->app_data['site_name'] = config_item("site_name");
         $this->main_layout = "main_layout";
     }
 

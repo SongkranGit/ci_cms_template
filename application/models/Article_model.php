@@ -67,7 +67,7 @@ class Article_Model extends CI_Model
         $this->db->select("a.* , p.id as page_id , p.name_en as page_name ");
         $this->db->from('articles a');
         $this->db->join("pages p", "p.id = a.page_id");
-        $this->db->where('a.page_id', strtolower($page_id) );
+        $this->db->where('a.page_id', intval($page_id) );
         $this->db->where('p.published', 1 );
         $this->db->where('a.is_deleted', 0);
         $this->db->order_by("a.order_seq", 'ASC');
@@ -86,10 +86,10 @@ class Article_Model extends CI_Model
 
     public function getArticleByPageName($page_name , $limit= null){
         $data = array();
-        $this->db->select("a.* , p.id as page_id , p.name as page_name ");
+        $this->db->select("a.* , p.id as page_id , p.name_th as page_name , p.detail_th , p.detail_en ");
         $this->db->from('articles a');
         $this->db->join("pages p", "p.id = a.page_id");
-        $this->db->where('p.name', strtolower($page_name) );
+        $this->db->where('p.page_name', strtolower($page_name) );
         $this->db->where('p.published', 1 );
         $this->db->where('a.is_deleted', 0);
         $this->db->order_by("a.order_seq", 'ASC');
@@ -125,9 +125,10 @@ class Article_Model extends CI_Model
     public function getListOfArticle($limit, $start , $page_id = NULL)
     {
         $data = array();
-        $this->db->select('a.*');
+        $this->db->select('a.* , ai.*');
         $this->db->from('articles a');
         $this->db->join("pages p", "p.id = a.page_id");
+        $this->db->join("article_images ai", "ai.article_id = a.id" , 'left');
         $this->db->where('a.is_deleted=', 0);
         $this->db->where('a.page_id', $page_id);
         $this->db->order_by("a.order_seq", 'ASC');

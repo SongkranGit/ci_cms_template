@@ -35,7 +35,10 @@ $lang['show_data_info'] 	  	        = 'Data information';
 $lang['caption']                        = 'Caption';
 $lang['message']                        = 'Message';
 $lang['subject']                        = 'Subject';
-
+$lang['menu_icon']                      = 'Menu Icon';
+$lang['name']                           = 'Name';
+$lang['register_newsletter']            = 'Register Newsletter';
+$lang['registered']                     = 'Registered';
 
 //Menu
 $lang['menu_main'] 	  	                = 'Main Menu';
@@ -68,6 +71,8 @@ $lang['menu_contact_list'] 	            = 'List of Contacts';
 $lang['menu_member'] 	                = 'Member';
 $lang['menu_students'] 	                = 'Students';
 $lang['menu_clip_categories'] 	        = 'Clip Categories';
+$lang['menu_icon']                      = 'Menu Icon';
+$lang['menu_founder']                   = 'Founder';
 //form
 $lang['form_field_status'] 	  	        = 'Status';
 $lang['form_field_published'] 	  	    = 'Published';
@@ -284,4 +289,6 @@ $lang['settings_facebook_link'] 	            = 'Facebook link';
 $lang['settings_twitter_link'] 	                = 'Twitter link';
 $lang['settings_instargram_link'] 	            = 'Instargram link';
 $lang['settings_vision'] 	                    = 'Vision';
+$lang['settings_map_url'] 	                    = 'Map Url';
+
 

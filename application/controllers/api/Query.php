@@ -62,7 +62,7 @@ class Query extends REST_Controller
     public function portfolio_get()
     {
         $language = trim($this->get('lang'));
-        $result = $this->processQueryPageData( $language, 'portfolio');
+        $result = $this->processQueryPageData( $language, 'Promotion');
         if ($result != null) {
             $this->response($result, REST_Controller::HTTP_OK); // OK (200) being the HTTP response code
         } else {

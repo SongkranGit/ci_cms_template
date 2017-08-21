@@ -35,6 +35,8 @@ $lang['show_data_info'] 	  	        = 'แสดงข้อมูลราย�
 $lang['caption']                        = 'คำบรรยายภาพ';
 $lang['message']                        = 'ข้อความ';
 $lang['subject']                        = 'หัวข้อ';
+$lang['register_newsletter']            = 'สมัครรับข่าวสาร';
+$lang['registered']                     = 'ลงทะเบียนแล้ว';
 //Menu Admin
 $lang['menu_main'] 	  	                = 'เมนูหลัก';
 $lang['menu_dashboard'] 	  	        = 'หน้าแรก';
@@ -68,6 +70,10 @@ $lang['menu_contact_list'] 	            = 'ข้อมูลผู้ติด�
 $lang['menu_member'] 	                = 'สมาชิก';
 $lang['menu_students'] 	                = 'ข้อมูลนักเรียน';
 $lang['menu_clip_categories'] 	        = 'หมวดหมู่คลิป';
+$lang['menu_icon']                      = 'เมนู ไอคอน';
+$lang['name']                           = 'ขื่อ';
+$lang['menu_founder']                   = 'ผู้ก่อตั้ง';
+
 //form
 $lang['form_field_status'] 	  	        = 'สถานะ';
 $lang['form_field_published'] 	  	    = 'เผยแพร่';
@@ -259,5 +265,5 @@ $lang['settings_facebook_link'] 	                    = 'ลิงค์ facebook
 $lang['settings_twitter_link'] 	                        = 'ลิงค์ twitter';
 $lang['settings_instargram_link'] 	                    = 'ลิงค์ Instargram';
 $lang['settings_vision'] 	                            = 'วิสัยทัศน์';
-
+$lang['settings_map_url'] 	                            = 'ลิงค์แผนที่';
 

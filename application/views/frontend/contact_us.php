@@ -1,76 +1,93 @@
 <?php $this->load->view("includes/frontend/header"); ?>
+<?php $this->load->view("includes/frontend/navbar"); ?>
 
+
+<div class="content_fullwidth less2">
     <div class="container">
-        <div class="col-md-5 col-md-offset-3">
-            <div class="form-area">
-                <?php echo form_open('contactus/create'); ?>
-                <br style="clear:both">
-                <h1 style="margin-bottom: 25px; text-align: center;">Contact Form</h1>
 
-                <?php if (isset($success) && boolval($success) == TRUE): ?>
-                    <div class="form-group">
-                        <div class="alert alert-success">
-                            <strong>Success!</strong> Indicates a successful or positive action.
-                        </div>
-                    </div>
-                <?php endif; ?>
+        <div class="one_half">
 
-                <div class="form-group">
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Name" value="<?php echo set_value('name'); ?>">
-                    </div>
-                    <?php echo form_error('name'); ?>
-                </div>
+            <p><?=$settings['vision_th']?></p>
+            <br/>
 
-                <div class="form-group">
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                        <input type="text" class="form-control" id="email" name="email" placeholder="Email" value="<?php echo set_value('email'); ?>">
-                    </div>
-                    <?php echo form_error('email'); ?>
-                </div>
-                <div class="form-group">
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
-                        <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone" value="<?php echo set_value('phone'); ?>">
-                    </div>
-                    <?php echo form_error('phone'); ?>
-                </div>
-
-                <div class="form-group">
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="  glyphicon glyphicon-pencil"></i></span>
-                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" value="<?php echo set_value('subject'); ?>">
-                    </div>
-                    <?php echo form_error('subject'); ?>
-                </div>
-                <div class="form-group">
-                    <textarea class="form-control" type="textarea" id="message" name="message" placeholder="Message" maxlength="140"
-                              rows="7"><?php echo set_value('message'); ?></textarea>
-                    <?php echo form_error('message'); ?>
-                </div>
-
-                <button type="submit" id="submit" name="submit" class="btn btn-primary pull-right">Submit Form</button>
+            <div class="cforms">
 
 
-                <?php echo form_close(); ?>
+                <div id="form_status"></div>
+                <form type="POST" id="gsr-contact" onSubmit="return valid_datas( this );">
+                    <label class="label">Name <em>*</em></label>
+                    <label class="input">
+                        <input type="text" name="name" id="name">
+                    </label>
+
+                    <div class="clearfix"></div>
+
+                    <label class="label">E-mail <em>*</em></label>
+                    <label class="input">
+                        <input type="email" name="email" id="email">
+                    </label>
+
+                    <!-- <div class="clearfix"></div>
+
+
+                    <label class="label">Phone <em>*</em></label>
+                    <label class="input">
+                        <input type="text" name="phone" id="phone">
+                    </label> -->
+
+                    <div class="clearfix"></div>
+
+                    <label class="label">Subject <em>*</em></label>
+                    <label class="input">
+                        <input type="text" name="subject" id="subject">
+                    </label>
+
+                    <div class="clearfix"></div>
+
+                    <label class="label">Message <em>*</em></label>
+                    <label class="textarea">
+                        <textarea rows="5" name="message" id="message"></textarea>
+                    </label>
+
+                    <div class="clearfix"></div>
+                    <input type="hidden" name="token" value="FsWga4&@f6aw"/>
+                    <button type="submit" class="button">ติดต่อ</button>
+
+                </form>
+
+
             </div>
+
         </div>
+
+        <div class="one_half last">
+
+            <div class="address_info">
+
+                <h4><strong><?=$settings['website_name']?></strong> Address</h4>
+                <ul>
+                    <li>
+                        <?=$settings['address_th']?><br/>
+                        Telephone: <?=$settings['phone']?><br/>
+                        FAX: <?=$settings['phone']?><br/>
+                        E-mail: <a href="mailto:<?=$settings['email']?>"><?=$settings['email']?></a><br/>
+                        Website: <a href="<?=base_url('home')?>">www.<?=$settings['website_name']?>.com</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+            <h4>Find the <strong>Address</strong></h4>
+            <iframe class="google-map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                    src="<?php echo $settings['map_url']?>"></iframe>
+            <br/>
+            <small>
+                <a href="<?php echo $settings['map_url']?>" target="_blank">View
+                    Larger Map</a>
+            </small>
+        </div>
+
     </div>
+</div><!-- end content area -->
 
-    <script type="text/javascript">
-
-        $(document).ready(function () {
-            hideSuccessMessage();
-        });
-
-        function hideSuccessMessage() {
-            setTimeout(function () {
-                $('.alert-success').hide();
-            }, 2000);
-        }
-
-    </script>
+<div class="clearfix margin_top12"></div>
 
 <?php $this->load->view("includes/frontend/footer"); ?>
