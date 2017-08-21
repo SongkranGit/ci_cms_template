@@ -29,7 +29,7 @@ class Page_Model extends CI_Model
         $data = array();
         $this->db->select("p.* ");
         $this->db->from('pages p');
-        $this->db->where('p.name', strtolower($name));
+        $this->db->where('p.page_name', strtolower($name));
         $this->db->where('p.is_deleted', 0);
         //$this->db->where('published', 1);
         $query = $this->db->get();;

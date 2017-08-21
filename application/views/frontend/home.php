@@ -98,98 +98,35 @@
     <div class="featured_section135">
         <div class="container">
 
-            <h2 class="title21 white lessm"><strong>services we are providing</strong> <em>necessary making the true enerato on the many desktop packages web page
+            <h2 class="title21 white lessm"><strong>services we are providing</strong>
+                <em>necessary making the true enerato on the many desktop packages web page
                     editors</em></h2>
 
-            <div class="one_third_less animate" data-anim-type="fadeInUp" data-anim-delay="200">
-                <div class="box">
+            <?php if(isset($services)): ?>
 
-                    <div class="box-cnt"><img src="http://placehold.it/375x380" alt=""/></div>
+                <?php foreach ($services as $key => $service): ?>
 
-                    <div class="box-details">
-                        <h4>many web sites</h4>
-                        <p>Model and a search for will many web sites still in there versions have the years.</p>
-                        <a href="#">Read more</a>
-                    </div>
+                    <?php ++$key;?>
+                    <div class="one_third_less animate <?= ($key % 3 == 0)?'last':''?>" data-anim-type="fadeInUp" data-anim-delay="200">
+                        <div class="box">
 
-                </div>
-            </div><!-- end section -->
+                            <div class="box-cnt"><img height="380" width="375" src="<?=base_url('uploads/article/'.$service['image_name'])?>" alt=""/></div>
 
-            <div class="one_third_less animate" data-anim-type="fadeInUp" data-anim-delay="200">
-                <div class="box">
+                            <div class="box-details">
+                                <h4><?=$service['name_th']?></h4>
+                                <p><?=$service['description_th']?></p>
+                                <a href="#">Read more</a>
+                            </div>
 
-                    <div class="box-cnt"><img src="http://placehold.it/375x380" alt=""/></div>
+                        </div>
+                    </div><!-- end section -->
 
-                    <div class="box-details">
-                        <h4>over the years</h4>
-                        <p>Model and a search for will many web sites still in there versions have the years.</p>
-                        <a href="#">Read more</a>
-                    </div>
+                    <?php if($key % 3 == 0): ?>
+                        <div class="clearfix margin_top3"></div>
+                    <?php endif;?>
 
-                </div>
-            </div><!-- end section -->
-
-            <div class="one_third_less last animate" data-anim-type="fadeInUp" data-anim-delay="200">
-                <div class="box">
-
-                    <div class="box-cnt"><img src="http://placehold.it/375x380" alt=""/></div>
-
-                    <div class="box-details">
-                        <h4>there sometimes</h4>
-                        <p>Model and a search for will many web sites still in there versions have the years.</p>
-                        <a href="#">Read more</a>
-                    </div>
-
-                </div>
-            </div><!-- end section -->
-
-
-            <div class="clearfix margin_top3"></div>
-
-
-            <div class="one_third_less animate" data-anim-type="fadeInUp" data-anim-delay="300">
-                <div class="box">
-
-                    <div class="box-cnt"><img src="http://placehold.it/375x380" alt=""/></div>
-
-                    <div class="box-details">
-                        <h4>for you always</h4>
-                        <p>Model and a search for will many web sites still in there versions have the years.</p>
-                        <a href="#">Read more</a>
-                    </div>
-
-                </div>
-            </div><!-- end section -->
-
-            <div class="one_third_less animate" data-anim-type="fadeInUp" data-anim-delay="300">
-                <div class="box">
-
-                    <div class="box-cnt"><img src="http://placehold.it/375x380" alt=""/></div>
-
-                    <div class="box-details">
-                        <h4>free repetition</h4>
-                        <p>Model and a search for will many web sites still in there versions have the years.</p>
-                        <a href="#">Read more</a>
-                    </div>
-
-                </div>
-            </div><!-- end section -->
-
-            <div class="one_third_less last animate" data-anim-type="fadeInUp" data-anim-delay="300">
-                <div class="box">
-
-                    <div class="box-cnt"><img src="http://placehold.it/375x380" alt=""/></div>
-
-                    <div class="box-details">
-                        <h4>even believable</h4>
-                        <p>Model and a search for will many web sites still in there versions have the years.</p>
-                        <a href="#">Read more</a>
-                    </div>
-
-                </div>
-            </div><!-- end section -->
-
-
+                <?php endforeach;?>
+            <?php endif;?>
         </div>
     </div><!-- end featured section 135 -->
 

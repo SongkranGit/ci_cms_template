@@ -3,54 +3,38 @@
 
     <div class="container">
 
-        <div class="column1 animate" data-anim-type="fadeIn" data-anim-delay="100">
+        <div class="one_fourth animate" data-anim-type="fadeInUp" data-anim-delay="100">
+            <ul class="faddress">
+                <li><img src="<?= base_url('assets/frontend/images/logo_company.png')?>" alt="" /></li>
+                <li><i class="fa fa-map-marker fa-lg"></i>&nbsp; <?=$settings['address_th']?></li>
+                <li><i class="fa fa-phone"></i>&nbsp; <?=$settings['phone']?></li>
+                <li><i class="fa fa-print"></i>&nbsp; <?=$settings['fax']?></li>
+                <li><a href="mailto:info@yourdomain.com"><i class="fa fa-envelope"></i>&nbsp; <?=$settings['email']?></a></li>
+                <li><img src="images/footer-wmap.png" alt="" /></li>
+            </ul>
+        </div><!-- end address -->
+
+        <div class="one_fourth animate" data-anim-type="fadeIn" data-anim-delay="100">
 
             <h3>About Us</h3>
             <p><?= strip_tags($settings['vision_th'])?></p>
 
         </div><!-- end section -->
 
-        <div class="column2 animate" data-anim-type="fadeIn" data-anim-delay="150">
-
-            <h3>More Services</h3>
-
-            <ul>
-                <li><a href="#">Our History</a></li>
-                <li><a href="#">Professionals</a></li>
-                <li><a href="#">Our Development</a></li>
-                <li><a href="#">Partnership With Us</a></li>
-                <li><a href="#">Company Carreer</a></li>
-                <li><a href="#">New Technology</a></li>
-                <li><a href="#">Client Testimonials</a></li>
-            </ul>
-
-            <ul>
-                <li><a href="#">Our History</a></li>
-                <li><a href="#">Professionals</a></li>
-                <li><a href="#">Our Development</a></li>
-                <li><a href="#">Partnership With Us</a></li>
-                <li><a href="#">Company Carreer</a></li>
-                <li><a href="#">New Technology</a></li>
-                <li><a href="#">Client Testimonials</a></li>
-            </ul>
-
-        </div><!-- end section -->
-
-
-        <div class="column1 animate" data-anim-type="fadeIn" data-anim-delay="200">
+        <div class="one_fourth animate" data-anim-type="fadeIn" data-anim-delay="200">
 
             <h3>Our Clients</h3>
 
             <ul class="clogos">
-                <li><img src="http://placehold.it/175x40" alt="" /></li>
-                <li><img src="http://placehold.it/175x40" alt="" /></li>
-                <li><img src="http://placehold.it/175x40" alt="" /></li>
-                <li><img src="http://placehold.it/175x40" alt="" /></li>
+                <li><img src="<?=base_url('assets/frontend/images/client-logo16.png')?>" alt="" /></li>
+                <li><img src="<?=base_url('assets/frontend/images/client-logo17.png')?>" alt="" /></li>
+                <li><img src="<?=base_url('assets/frontend/images/client-logo18.png')?>" alt="" /></li>
+                <li><img src="<?=base_url('assets/frontend/images/client-logo19.png')?>" alt="" /></li>
             </ul>
 
         </div><!-- end section -->
 
-        <div class="column1 last animate" data-anim-type="fadeIn" data-anim-delay="250">
+        <div class="one_fourth last animate" data-anim-type="fadeIn" data-anim-delay="250">
 
             <h3>Get Connected</h3>
 
@@ -64,7 +48,7 @@
 
             <div class="clearfix margin_top2"></div>
 
-            <img src="<?= base_url('assets/frontend/images/logo_company.png')?>" alt="" />
+
 
         </div><!-- end section -->
 

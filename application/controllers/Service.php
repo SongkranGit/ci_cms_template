@@ -14,9 +14,8 @@ class Service extends Frontend_Controller
         $this->load->model('Article_model');
     }
 
-
     function index(){
-
+        $data['page_service'] = $this->Page_model->getByName($this->page_name);
         $data['services'] = $this->Article_model->getArticleByPageName($this->page_name);
         $data['settings'] = $this->app_data['settings'] ;
 

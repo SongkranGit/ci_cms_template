@@ -86,9 +86,10 @@ class Article_Model extends CI_Model
 
     public function getArticleByPageName($page_name , $limit= null){
         $data = array();
-        $this->db->select("a.* , p.id as page_id , p.name_th as page_name , p.detail_th , p.detail_en ");
+        $this->db->select("a.* , p.id as page_id , p.name_th as page_name , p.detail_th , p.detail_en , ai.image_name ");
         $this->db->from('articles a');
         $this->db->join("pages p", "p.id = a.page_id");
+        $this->db->join("article_images ai", "ai.article_id = a.id" , 'left');
         $this->db->where('p.page_name', strtolower($page_name) );
         $this->db->where('p.published', 1 );
         $this->db->where('a.is_deleted', 0);

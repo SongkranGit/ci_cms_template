@@ -21,12 +21,10 @@
     <div class="one_half last">
 
         <div class="stcode_title5">
-            <h3 class="nmb"><strong>We Build Amazing Stuff!</strong></h3>
+            <h3 class="nmb"><strong><?=$page_service['name_th']?></strong></h3>
         </div>
 
-        <h5 class="gray">Will cover many web sites still in their infancy various versions have evo packages over the years.</h5>
-
-        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet anything embarrassing hidden in the middle many web sites. generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful embarrassing hidden in the middle of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always.</p>
+        <p> <?=$page_service['detail_th']?></p>
 
         <div class="clearfix marb12"></div>
 
@@ -34,5 +32,6 @@
 
 </div><!-- end all sections -->
 
+<div class="clearfix margin_top12"></div>
 
 <?php $this->load->view("includes/frontend/footer"); ?>
